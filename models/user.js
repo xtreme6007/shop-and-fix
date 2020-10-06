@@ -18,10 +18,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
 
-    car: {
-      type:DataTypes.STRING,
-      allowNull: true,
-
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "Customer" 
     }
 
   });
