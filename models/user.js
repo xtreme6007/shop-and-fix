@@ -19,7 +19,8 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     car: {
-      type:DataTypes.STRING
+      type:DataTypes.STRING,
+      allowNull: true,
 
     }
 
