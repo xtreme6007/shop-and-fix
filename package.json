@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "shop-and-fix",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -32,5 +32,13 @@
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtreme6007/shop-and-fix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xtreme6007/shop-and-fix/issues"
+  },
+  "homepage": "https://github.com/xtreme6007/shop-and-fix#readme"
 }

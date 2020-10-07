@@ -21,6 +21,7 @@ module.exports = function(app) {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
+      car: req.body.car
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -40,7 +41,7 @@ module.exports = function(app) {
   app.get("/api/user_data", (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
-      res.json({});
+      res.json("Invalid Login");
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
