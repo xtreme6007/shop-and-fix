@@ -45,6 +45,8 @@ module.exports = function(app) {
   app.get("/faq", isAuthenticated, (req, res) => {
     res.render("faq");
   });
-
+  app.get("/refer", isAuthenticated, (req, res) => {
+    res.render("refer");
+  });
 
 };
