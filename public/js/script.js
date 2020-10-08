@@ -3,6 +3,9 @@ $(document).ready(() => {
     const loginForm = $("form.login");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
+    const carMake =  $("input#carMake-input");
+    const carModel = $("input#carModel-input");
+    const nameInput = $("input#name-input");
   
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("submit", event => {
@@ -52,28 +55,30 @@ $(document).ready(() => {
     const userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-      //car: carInput.val().trim(),
-      //name: nameInput.val.trim()
+      car_make: carMake.val().trim(),
+      name: nameInput.val().trim(),
+      car_model: carModel.val().trim()
       
     };
 
-    if (!userData.email || !userData.password /*|| !userData.car || !userData.name*/) {
+    if (!userData.email || !userData.password || !userData.car_make || !userData.car_model || !userData.name) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, /*userData.car, userData.name*/);
+    signUpUser(userData.email, userData.password, userData.car_make, userData.name, userData.car_model);
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password/*, car, name*/) {
+  function signUpUser(email, password, car_make, name, car_model) {
     $.post("/api/signup", {
       email: email,
       password: password,
-      /*car: car,
-      name: name*/
+      car_make: car_make,
+      name: name,
+      car_model: car_model,
     })
       .then(() => {
         window.location.replace("/members");
