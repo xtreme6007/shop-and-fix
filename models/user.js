@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       defaultValue: "customer"
     },
-    car: {
+    car_make: {
       type: DataTypes.STRING,
       allowNull: true,
 
@@ -32,6 +32,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true,
 
+    },
+    car_model: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
 
   });
