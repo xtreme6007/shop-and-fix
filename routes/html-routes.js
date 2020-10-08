@@ -38,7 +38,13 @@ module.exports = function(app) {
     res.render("customerDash");
   });
 
-  
+  app.get("/park", isAuthenticated, (req, res) => {
+    res.render("park");
+  });
+
+  app.get("/faq", isAuthenticated, (req, res) => {
+    res.render("faq");
+  });
 
 
 };
