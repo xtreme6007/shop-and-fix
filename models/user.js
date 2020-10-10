@@ -47,7 +47,6 @@ module.exports = function (sequelize, DataTypes) {
       package: {
         type: DataTypes.STRING,
         allowNull: true
-
       }
     
 
