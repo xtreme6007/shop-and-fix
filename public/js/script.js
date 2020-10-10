@@ -6,6 +6,7 @@ $(document).ready(() => {
     const carMake =  $("input#carMake-input");
     const carModel = $("input#carModel-input");
     const nameInput = $("input#name-input");
+    const licensePlateInput = $("input#licensePlate-input");
   
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("submit", event => {
@@ -57,7 +58,8 @@ $(document).ready(() => {
       password: passwordInput.val().trim(),
       car_make: carMake.val().trim(),
       name: nameInput.val().trim(),
-      car_model: carModel.val().trim()
+      car_model: carModel.val().trim(),
+      license_plate: licensePlateInput.val.trim
       
     };
 
@@ -72,13 +74,14 @@ $(document).ready(() => {
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password, car_make, name, car_model) {
+  function signUpUser(email, password, car_make, name, car_model, license_plate) {
     $.post("/api/signup", {
       email: email,
       password: password,
       car_make: car_make,
       name: name,
       car_model: car_model,
+      license_plate: license_plate
     })
       .then(() => {
         window.location.replace("/members");
