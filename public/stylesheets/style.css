@@ -87,3 +87,12 @@ form.login {
   max-height: 3.125rem;
   font-size: 3.125rem;
 }
+
+.main {
+  margin: 50px;
+}
+
+
+.pic {
+  margin-bottom: 50px;
+}
