@@ -36,7 +36,14 @@ module.exports = function (sequelize, DataTypes) {
     car_model: {
       type: DataTypes.STRING,
       allowNull: true
-    }
+    }, 
+    
+      license_plate: {
+
+        type: DataTypes.STRING,
+        allowNull: true
+      }
+    
 
   });
 
