@@ -42,6 +42,12 @@ module.exports = function (sequelize, DataTypes) {
 
         type: DataTypes.STRING,
         allowNull: true
+      },
+
+      package: {
+        type: DataTypes.string,
+        allowNull: true
+
       }
     
 

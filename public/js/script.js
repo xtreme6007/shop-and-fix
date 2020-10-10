@@ -59,8 +59,8 @@ $(document).ready(() => {
       car_make: carMake.val().trim(),
       name: nameInput.val().trim(),
       car_model: carModel.val().trim(),
-      license_plate: licensePlateInput.val.trim
-      
+      license_plate: licensePlateInput.val().trim()
+
     };
 
     if (!userData.email || !userData.password || !userData.car_make || !userData.car_model || !userData.name) {
