@@ -23,7 +23,8 @@ module.exports = function(app) {
       password: req.body.password,
       car_model: req.body.car_model,
       car_make: req.body.car_make,
-      name: req.body.name
+      name: req.body.name,
+      license_plate: req.body.licensePlate
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -53,4 +54,16 @@ module.exports = function(app) {
       });
     }
   });
-};
+
+  app.post("/api/user_data", (req, res) => {
+    db.User.update({
+      package:req.body.package,
+      parking_space: req.body.spot
+
+    });
+
+
+  })
+
+  
+  };

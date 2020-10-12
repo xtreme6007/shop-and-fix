@@ -5,7 +5,7 @@
     "database": "soo2g5mca7f1ie0a",
     "host": "nwhazdrp7hdpd4a4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "force":"false"
+    "force": "true"
   },
   "test": {
     "username": "root",
@@ -19,3 +19,5 @@
     "dialect": "mysql"
   }
 }
+
+
