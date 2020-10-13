@@ -2,7 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -55,19 +55,27 @@ module.exports = function(app) {
     }
   });
 
-  app.post("/api/user_data", passport.authenticate("local"), (req, res) => {
-    db.User.update({where: {
-      id: req.user.id
+  app.post("/api/user_data", (req, res) => {
+    if (!req.user) {
+      console.log("no user")
+      res.status(401).end();
+    } else {
+console.log("has user")
+console.log(req.body)
+
+      db.User.update(
+        {
+          package: req.body.package,
+          parking_space: req.body.parking_space
+
+        },
+        {where:{id: req.user.id}}
+        ).then(() => {
+          res.redirect("/members")
+        })
     }
-    
-    },{
-      package:req.body.package,
-      parking_space: req.body.spot
-
-    });
-
 
   })
 
-  
-  };
+
+};
