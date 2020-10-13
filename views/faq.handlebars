@@ -1,0 +1,62 @@
+<nav class="nav"></nav>
+<div class="container main">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm">
+        <img src="/assets/imgs/car-icon2.png" class="pic" alt="park your car graphic" height="150" width="150" />
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+<div class="container text-center">
+    <h1 class="faq">Frequently Asked Questions</h1>
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+ 
+    $('.faq_question').click(function() {
+ 
+        if ($(this).parent().is('.open')){
+            $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'},500);
+            $(this).closest('.faq').removeClass('open');
+ 
+            }else{
+                var newHeight =$(this).closest('.faq').find('.faq_answer').height() +'px';
+                $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight},500);
+                $(this).closest('.faq').addClass('open');
+            }
+ 
+    });
+ 
+});
+</script>
+
+<div class="faq_container text-center">
+   <div class="faq">
+      <div class="faq_question">Question goes here</div>
+           <div class="faq_answer_container">
+              <div class="faq_answer">Answer goes here</div>
+           </div>        
+    </div>
+    <div class="faq">
+      <div class="faq_question">Question goes here</div>
+           <div class="faq_answer_container">
+              <div class="faq_answer">Answer goes here</div>
+           </div>        
+    </div>
+    <div class="faq">
+      <div class="faq_question">Question goes here</div>
+           <div class="faq_answer_container">
+              <div class="faq_answer">Answer goes here</div>
+           </div>        
+    </div>
+    <div class="faq">
+      <div class="faq_question">Question goes here</div>
+           <div class="faq_answer_container">
+              <div class="faq_answer">Answer goes here</div>
+           </div>        
+    </div>
+ </div>
