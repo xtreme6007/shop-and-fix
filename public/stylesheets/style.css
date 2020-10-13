@@ -99,3 +99,22 @@ font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
   color: white;
   background-color: hsl(110, 68%, 46%);
 }
+
+.faq {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  margin-bottom: 40px;
+}
+
+.faq_question {
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq_answer_container {
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
