@@ -9,7 +9,7 @@ $(document).ready(() => {
   const licensePlateInput = $("input#licensePlate-input");
   const parkForm = $("form.park");
   const packageChoice = $("#package");
-  const parkingSpace = $("#spot");
+  const parkingSpace = $("#spot-input");
 
 
   // When the form is submitted, we validate there's an email and password entered

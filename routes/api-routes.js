@@ -55,8 +55,12 @@ module.exports = function(app) {
     }
   });
 
-  app.post("/api/user_data", (req, res) => {
-    db.User.update({
+  app.post("/api/user_data", passport.authenticate("local"), (req, res) => {
+    db.User.update({where: {
+      id: req.user.id
+    }
+    
+    },{
       package:req.body.package,
       parking_space: req.body.spot
 
