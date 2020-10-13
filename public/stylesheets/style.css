@@ -62,3 +62,40 @@ form.login {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+
+.custombtn {
+font-size: 50px;
+margin: auto;
+height: 296px;
+width: 429px;
+background-color: rgb(56,168,233);
+color: white;
+border: none;
+border-radius: 20px;
+font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+}
+
+.custombtn2 {
+  font-size: 50px;
+  margin: auto;
+  height: 226px;
+  width: 326px;
+  background-color: rgb(56,168,233);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  }
+
+
+.custombtn:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+
+.custombtn2:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
