@@ -99,9 +99,9 @@ module.exports = function (app) {
   })
 
   app.get("/api/customer_data", (req,res) => {
-        const data = db.User.findAll({where: {
+         db.User.findAll({where: {
           role: "customer",
-          complete:1
+          complete:0
         }}).then(data => {
           res.render(data)
         })

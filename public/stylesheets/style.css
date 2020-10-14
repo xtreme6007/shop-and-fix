@@ -204,12 +204,12 @@ body {
   }
   
   
-  /* Animation: Counter counter clockwise */
-  @-webkit-keyframes pulsate-blue {
-    0%   { background:rgba(0,0,255,.1);
-           -webkit-transform:/* Add Cool stuff here! */; 
-    } 
-    100% { background:rgba(255,255,255,.1);
-           -webkit-transform:/* Add Cool stuff here! */; 
-    }
+ /* Animation: Counter counter clockwise */
+ @-webkit-keyframes pulsate-blue {
+  0%   { background:radial-gradient(Red, black, green, orange, blue);
+         
+  } 
+  100% { background:radial-gradient(Red, black, green, orange, blue);
+         
+  }
 }

@@ -12,6 +12,7 @@ $(document).ready(() => {
   const parkForm = $("form.park");
   const packageChoice = $("#package");
   const parkingSpace = $("#spot-input");
+  let text;
   
 
 
@@ -147,6 +148,26 @@ $(document).ready(() => {
 
     })
   });
+
+  function makeCode() {
+     text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+      
+    return text;
+    
+  }
+  
+  
+
+  $("#codeBtn").on("click", event => {
+    event.preventDefault();
+    console.log(makeCode())
+    
+  } )
+
 
 });
 
