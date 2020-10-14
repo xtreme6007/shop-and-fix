@@ -84,14 +84,16 @@ module.exports = function (app) {
   })
 
   app.post("/api/tasks", (req,res)=> {
+
+    
       db.Task.create({
-        name: req.name,
-        car_make: req.car_make,
-        car_model: req.car_model,
-        license_plate: req.license_plate,
-        package: req.package,
-        parking_space: req.parking_space,
-        complete: req.complete
+        name: req.body.name,
+        car_make: req.body.car_make,
+        car_model: req.body.car_model,
+        license_plate: req.body.license_plate,
+        package: req.body.package,
+        parking_space: req.body.parking_space,
+        complete: req.body.complete
 
 
 
@@ -99,10 +101,12 @@ module.exports = function (app) {
   })
 
   app.get("/api/customer_data", (req,res) => {
+  
          db.User.findAll({where: {
           role: "customer",
           complete:0
         }}).then(data => {
+          
           res.render(data)
         })
 

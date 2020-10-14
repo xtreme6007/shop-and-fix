@@ -12,7 +12,7 @@ $(document).ready(() => {
   const parkForm = $("form.park");
   const packageChoice = $("#package");
   const parkingSpace = $("#spot-input");
-  let text;
+  let referalCode;
   
 
 
@@ -141,7 +141,7 @@ $(document).ready(() => {
       parking_space: parkingSpace.val().trim(),
       complete: 0
     }).then(() => { 
-      /*findTask();*/
+      findTask();
       window.location.replace("/thankyou")
 
 
@@ -150,13 +150,13 @@ $(document).ready(() => {
   });
 
   function makeCode() {
-     text = "";
+     referalCode = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   
     for (var i = 0; i < 5; i++)
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
+      referalCode += possible.charAt(Math.floor(Math.random() * possible.length));
       
-    return text;
+    return referalCode;
     
   }
   
