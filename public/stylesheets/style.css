@@ -118,3 +118,98 @@ font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
   overflow: hidden;
   padding: 0px;
 }
+
+
+body {
+  background:black;  
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.effect-wrapper {
+  position:relative;
+  width:400px;
+  height:400px;
+}
+
+.effect-wrapper .layer1,
+.effect-wrapper .layer2 {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      background:radial-gradient(Red, black, green, orange, blue);
+      
+  } 
+  
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      background:rgba(14, 201, 39, 0.1);
+     
+  } 
+  
+  .effect-wrapper .layer1 *,
+  .effect-wrapper .layer2 * {
+      display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+      width:80%;
+      height:80%;
+  } 
+  
+  
+  
+  
+  /* --------- Animation --------- */
+  .effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      -webkit-animation-name: spin-clockwise;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+      -webkit-box-shadow:inset 0 0 10px black;
+  }
+  
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      -webkit-animation-name: spin-counter-clockwise, pulsate-blue;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+      -webkit-box-shadow:inset 0 0 10px black;
+  }
+  
+  
+  
+  
+  /* Animation: Clockwise */
+  @-webkit-keyframes spin-clockwise {
+      0%   { -webkit-transform: rotate(0deg);   }
+      100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  /* Animation: Counter counter clockwise */
+  @-webkit-keyframes spin-counter-clockwise {
+      0%   { -webkit-transform: rotate(0deg);   } 
+      100% { -webkit-transform: rotate(-360deg); }
+  }
+  
+  
+  /* Animation: Counter counter clockwise */
+  @-webkit-keyframes pulsate-blue {
+    0%   { background:rgba(0,0,255,.1);
+           -webkit-transform:/* Add Cool stuff here! */; 
+    } 
+    100% { background:rgba(255,255,255,.1);
+           -webkit-transform:/* Add Cool stuff here! */; 
+    }
+}

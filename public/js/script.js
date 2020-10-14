@@ -1,3 +1,5 @@
+
+
 $(document).ready(() => {
   // Getting references to our form and inputs
   const loginForm = $("form.login");
@@ -10,6 +12,8 @@ $(document).ready(() => {
   const parkForm = $("form.park");
   const packageChoice = $("#package");
   const parkingSpace = $("#spot-input");
+  
+
 
 
   // When the form is submitted, we validate there's an email and password entered
@@ -88,11 +92,40 @@ $(document).ready(() => {
       license_plate: license_plate
     })
       .then(() => {
-        window.location.replace("/members");
+        window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
   }
+
+  function addTask(name, car_make, car_model, license_plate, package, parking_space, complete) {
+    $.post("/api/tasks", {
+      name: name,
+      car_make: car_make,
+      car_model: car_model,
+      license_plate: license_plate,
+      package: package,
+      parking_space: parking_space,
+      complete: complete
+
+    })
+
+  }
+
+  function findTask() {
+
+    
+    $.get("/api/user_data").then(data => {
+
+      addTask(data.name, data.car_make, data.car_model, data.license_plate, data.package, data.parking_space, data.complete )
+    })
+
+    
+
+
+  }
+
+  
 
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
@@ -101,13 +134,18 @@ $(document).ready(() => {
 
   parkForm.on("submit", event => {
     event.preventDefault();
-  
+
     $.post("/api/user_data", {
       package: packageChoice.val(),
-      parking_space: parkingSpace.val().trim()
+      parking_space: parkingSpace.val().trim(),
+      complete: 0
+    }).then(() => { 
+      /*findTask();*/
+      window.location.replace("/thankyou")
+
+
+
     })
-
-
   });
 
 });
