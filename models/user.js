@@ -52,6 +52,11 @@ module.exports = function (sequelize, DataTypes) {
       parking_space: { 
       type: DataTypes.STRING,
       allowNull: true
+      },
+      complete: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: 0
       }
 
   });

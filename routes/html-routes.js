@@ -54,5 +54,8 @@ module.exports = function(app) {
   app.get("/refer", isAuthenticated, (req, res) => {
     res.render("refer");
   });
+  app.get("/thankyou", isAuthenticated, (req, res) => {
+    res.render("thankyou");
+  });
 
 };
