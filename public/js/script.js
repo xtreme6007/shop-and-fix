@@ -12,7 +12,7 @@ $(document).ready(() => {
   const parkForm = $("form.park");
   const packageChoice = $("#package");
   const parkingSpace = $("#spot-input");
-  let referalCode;
+  // let referralCode;
   
   let referal = $("#ref-code")
 
@@ -156,25 +156,21 @@ $(document).ready(() => {
     })
   });
 
+  var generateBTN = document.querySelector("#code");
+
   function makeCode() {
-     referalCode = "";
+     referralCode = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   
     for (var i = 0; i < 5; i++)
-      referalCode += possible.charAt(Math.floor(Math.random() * possible.length));
 
+      referralCode += possible.charAt(Math.floor(Math.random() * possible.length));
       
+    return referralCode;
 
-  
-
-  return referalCode;
-      
-    
     
   }
   
-  
-
   $("#codeBtn").on("click", event => {
     event.preventDefault();
     
@@ -182,6 +178,16 @@ $(document).ready(() => {
     
   } )
 
+  function writereferralCode() {
+    var referralCode = makeCode();
+    var referralCodeText = document.querySelector("#referralCode");
+  
+    referralCodeText.value = referralCode;
+  
+  }
+  
+  // Add event listener to generate button
+  generateBTN.addEventListener("click", writereferralCode);
 
 });
 
