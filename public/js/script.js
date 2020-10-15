@@ -14,6 +14,12 @@ $(document).ready(() => {
   const parkingSpace = $("#spot-input");
   let referalCode;
   
+  let referal = $("#ref-code")
+
+  
+  
+  
+  
 
 
 
@@ -30,7 +36,7 @@ $(document).ready(() => {
     }
 
     // If we have an email and password we run the loginUser function and clear the form
-    loginUser(userData.email, userData.password);
+    loginUser(userData.email, userData.password, );
     emailInput.val("");
     passwordInput.val("");
   });
@@ -42,6 +48,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
+
 
         window.location.replace("/members");
         // If there's an error, log the error
@@ -155,8 +162,14 @@ $(document).ready(() => {
   
     for (var i = 0; i < 5; i++)
       referalCode += possible.charAt(Math.floor(Math.random() * possible.length));
+
       
-    return referalCode;
+
+  
+
+  return referalCode;
+      
+    
     
   }
   
@@ -164,7 +177,8 @@ $(document).ready(() => {
 
   $("#codeBtn").on("click", event => {
     event.preventDefault();
-    console.log(makeCode())
+    
+    referal.value = makeCode();
     
   } )
 
