@@ -213,3 +213,44 @@ body {
          
   }
 }
+
+.card-header {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 500px;
+  font-weight: 700;
+  border: none;
+}
+
+.card-body {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  border: none;
+}
+
+.card-footer {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  border: none;
+  
+}
+
+.getCode {
+margin: auto;
+height: 148px;
+width: 214.5px;
+background-color: rgb(56,168,233);
+color: white;
+border: none;
+border-radius: 20px;
+font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+font-size: xx-large;
+}
+
+.getCode:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+#referralCode {
+  text-align: center;
+  font-size: xx-large;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+}
