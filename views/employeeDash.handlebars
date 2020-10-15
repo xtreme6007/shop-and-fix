@@ -1,0 +1,11 @@
+{{#each data}}
+ <li>
+            {{data.name}}
+
+            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+              Devour!
+            </button>
+
+            <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+          </li>
+

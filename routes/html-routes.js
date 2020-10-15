@@ -1,3 +1,7 @@
+// Requiring our models and passport as we've configured it
+const db = require("../models");
+const passport = require("../config/passport");
+
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
 
@@ -17,8 +21,9 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
-    }
+    } else {
     res.render("login");
+    }
   });
 
   // Here we've add our isAuthenticated middleware to this route.
@@ -26,9 +31,15 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     
     if (req.user.role === "customer") {
+      
       res.render("customerDash");
     } else if (req.user.role === "employee") {
-    res.render("employeeDash")
+      db.Task.findAll({where:{complete:0}}).then(data => {
+        res.render("employeeDash", data)
+      })
+      
+
+    
     }
 
   });
@@ -56,6 +67,14 @@ module.exports = function(app) {
   });
   app.get("/thankyou", isAuthenticated, (req, res) => {
     res.render("thankyou");
+  });
+
+  app.get("/employee", isAuthenticated, (req, res) => {
+    
+    db.Task.findAll({where:{complete:0}}).then(data => {
+      res.render("employeeDash", data)
+    })
+    
   });
 
 };

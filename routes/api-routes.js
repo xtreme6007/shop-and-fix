@@ -100,6 +100,16 @@ module.exports = function (app) {
       })
   })
 
+  app.get("api/tasks", (req,res) => {
+
+      db.Task.findAll({where: {
+        complete:0
+      }})
+
+
+
+  })
+
   app.get("/api/customer_data", (req,res) => {
   
          db.User.findAll({where: {
@@ -107,10 +117,9 @@ module.exports = function (app) {
           complete:0
         }}).then(data => {
           
-          res.render(data)
+          res.json(data)
         })
-
-        
+    
           
 
   })
@@ -118,8 +127,3 @@ module.exports = function (app) {
 
 
 };
-/* Sequalize.query("insert into Tasks select car_make car_model name license_plate package parking_space from users WHERE role = customer AND complete = 0 ", {
-  type: Sequelize.QueryTypes.SELECT
-}).then(function (results) {
-  console.log(results)
-})*/
