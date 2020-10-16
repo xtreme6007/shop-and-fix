@@ -72,7 +72,16 @@ module.exports = function(app) {
   app.get("/employee", isAuthenticated, (req, res) => {
     
     db.Task.findAll({where:{complete:0}}).then(data => {
-      res.render("employeeDash", data)
+      const tasks = data.map( (task) => {
+        
+      return task.dataValues
+
+      });
+      
+      res.render("employeeDash", {tasks: tasks})
+        
+      
+      ;
     })
     
   });

@@ -187,7 +187,14 @@ $(document).ready(() => {
   }
   
   // Add event listener to generate button
-  generateBTN.addEventListener("click", writereferralCode);
+  //generateBTN.addEventListener("click", writereferralCode);
+
+  $("#compBtn").on("click", () => {
+    
+    $.post("/api/customer_data",{
+      name: $("#name").id
+    })
+  })
 
 });
 
