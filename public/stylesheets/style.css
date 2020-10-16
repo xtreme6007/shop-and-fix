@@ -100,6 +100,23 @@ font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
   background-color: hsl(110, 68%, 46%);
 }
 
+.custombtn3 {
+  font-size: 25px;
+  height: 80px;
+  width: 110px;
+  background-color: rgb(56,168,233);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  margin-top: 20px;
+}
+
+.custombtn3:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
 .faq {
   font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
   margin-bottom: 40px;
@@ -253,4 +270,26 @@ font-size: xx-large;
   text-align: center;
   font-size: xx-large;
   font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+}
+
+.btn-default {
+  border: medium;
+}
+
+.parkcar {
+  margin-bottom: 40px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 70px;
+}
+
+.thankyou {
+  text-align: center;
+}
+
+.effect-wrapper {
+  margin: auto;
+}
+
+.page-footer {
+  margin-top: 200px;
 }
