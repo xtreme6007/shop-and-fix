@@ -11,7 +11,7 @@ module.exports = {
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "eslint"
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
