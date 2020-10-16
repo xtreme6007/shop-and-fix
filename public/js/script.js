@@ -75,7 +75,7 @@ $(document).ready(() => {
       car_make: carMake.val().trim(),
       name: nameInput.val().trim(),
       car_model: carModel.val().trim(),
-      license_plate: licensePlateInput.val().trim()
+      license_plate: licensePlateInput.val()
 
     };
 
@@ -189,10 +189,10 @@ $(document).ready(() => {
   // Add event listener to generate button
   //generateBTN.addEventListener("click", writereferralCode);
 
-  $("#compBtn").on("click", () => {
+  $(".complete").on("click", () => {
     
     $.post("/api/customer_data",{
-      name: $("#name").id
+      id: (".complete").id
     })
   })
 
