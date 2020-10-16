@@ -1,13 +1,16 @@
-{{#each data}}
- <li>
-            {{data.name}}
+<div class="container" style="background: black;">
+    <div class="container">
+<ul class="text-center">
+{{#each tasks}}
 
-            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-              Devour!
-            </button>
+<div class="border-div">
+<div data-id="{{this.id}}" class="taskDiv">{{name}} {{car_make}} {{car_model}} {{parking_space}} {{package}}<button id ="compBtn" class = "complete">Complete</button></div>
+</div>
+ {{/each}}
 
-            <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-          </li>
+
+</ul>
+</div>
 
 
 
@@ -23,4 +26,5 @@
 
 </footer>
 <!-- Footer -->
+
 </div>

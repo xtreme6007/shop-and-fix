@@ -124,6 +124,18 @@ module.exports = function (app) {
 
   })
 
+  app.post("/api/customer_data", (req,res) => {
+   
+    console.log(req.Task)
+    db.Task.update({complete:0}, {where: {
+        id: req.body.id
+
+    }})
+     
+      
+
+  })
+
 
 
 };
