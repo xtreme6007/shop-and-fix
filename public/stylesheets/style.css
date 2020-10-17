@@ -272,6 +272,25 @@ font-size: xx-large;
   font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
 }
 
+
+.taskDiv {
+  color: white;
+height:99%;
+width: 99%;
+
+background: black; 
+
+}
+.border-div{
+  padding:5px;
+  color: white;
+height: 50px;
+width: 500px;
+background: linear-gradient(blue, green);
+margin: 20px;
+}
+
+
 .btn-default {
   border: medium;
 }
@@ -291,5 +310,15 @@ font-size: xx-large;
 }
 
 .page-footer {
-  margin-top: 200px;
+  padding-top: 200px;
+
+}
+
+.services {
+  margin-bottom: 20px;
+}
+
+.referralTerms {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 25px;
 }
