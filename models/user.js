@@ -36,33 +36,33 @@ module.exports = function (sequelize, DataTypes) {
     car_model: {
       type: DataTypes.STRING,
       allowNull: true
-    }, 
-    
-      license_plate: {
+    },
 
-        type: DataTypes.STRING,
-        allowNull: true
-      },
+    license_plate: {
 
-      package: {
-        type: DataTypes.STRING,
-        allowNull: true
-      },
-
-      parking_space: { 
       type: DataTypes.STRING,
       allowNull: true
-      },
-      complete: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: 0
-      }
+    },
+
+    package: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+
+    parking_space: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    complete: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: 0
+    }
 
   });
 
 
-  
+
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);

@@ -180,15 +180,16 @@ $(document).ready(() => {
     referralCodeText.value = referralCode;
   
   }
-  
+  if (generateBTN){
   // Add event listener to generate button
   generateBTN.addEventListener("click", writereferralCode);
-
-  $(".complete").on("click", () => {
-    
+  }
+  $(".complete").on("click",  function (){
+    console.log($(this))
     $.post("/api/customer_data",{
-      id: (".complete").id
+      id: $(this).attr("id")
     })
+    location.reload();
   })
   
 });
