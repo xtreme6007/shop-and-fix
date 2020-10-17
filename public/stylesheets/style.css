@@ -66,7 +66,7 @@ form.login {
 
 .custombtn {
 font-size: 50px;
-margin: auto;
+margin: 15px ;
 height: 296px;
 width: 429px;
 background-color: rgb(56,168,233);
@@ -78,7 +78,7 @@ font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
 
 .custombtn2 {
   font-size: 50px;
-  margin: auto;
+  margin: 15px;
   height: 226px;
   width: 326px;
   background-color: rgb(56,168,233);
