@@ -16,11 +16,6 @@ $(document).ready(() => {
   
   let referal = $("#ref-code")
 
-  
-  
-  
-  
-
 
 
   // When the form is submitted, we validate there's an email and password entered
@@ -195,6 +190,7 @@ $(document).ready(() => {
       id: (".complete").id
     })
   })
-
+  
 });
+
 

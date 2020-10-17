@@ -288,6 +288,8 @@ height: 50px;
 width: 500px;
 background: linear-gradient(blue, green);
 margin: 20px;
+}
+
 
 .btn-default {
   border: medium;
@@ -308,6 +310,15 @@ margin: 20px;
 }
 
 .page-footer {
-  margin-top: 200px;
+  padding-top: 200px;
 
+}
+
+.services {
+  margin-bottom: 20px;
+}
+
+.referralTerms {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 25px;
 }
