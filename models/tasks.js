@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
   
       },
       car_model: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true
       },
       name: {

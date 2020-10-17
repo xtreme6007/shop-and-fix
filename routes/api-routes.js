@@ -127,10 +127,11 @@ module.exports = function (app) {
 
 
 
-    app.post("/api/customer_data", () => {
+    app.post("/api/customer_data", (req, res) => {
 
-      db.Task.update({complete:1}, {where: {id: id}})
+      db.Task.update({complete:1}, {where: {id: req.body.id}})
 
     })
+    
 
 }
