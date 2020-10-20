@@ -1,0 +1,30 @@
+<div class="container" style="background: black;">
+    <div class="container">
+<ul class="text-center">
+{{#each tasks}}
+
+<div class="border-div">
+<div class="taskDiv">{{name}} {{car_make}} {{car_model}} {{parking_space}} {{package}}<button id = {{id}} class = "complete">Complete</button></div>
+</div>
+ {{/each}}
+
+
+</ul>
+</div>
+
+<div class="container text-center">
+   <!-- Footer -->
+<footer class="page-footer font-small blue">
+<a href="/login">Home</a> | <a href="/employee">Employees</a> |  <a href="/logout">
+        Logout
+      </a>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</div>

@@ -2,3 +2,323 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.main {
+  margin: 50px;
+}
+
+
+.pic {
+  margin-bottom: 50px;
+}
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.custombtn {
+font-size: 50px;
+margin: 15px ;
+height: 296px;
+width: 429px;
+background-color: rgb(56,168,233);
+color: white;
+border: none;
+border-radius: 20px;
+font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+}
+
+.custombtn2 {
+  font-size: 50px;
+  margin: 15px;
+  height: 226px;
+  width: 326px;
+  background-color: rgb(56,168,233);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  }
+
+
+.custombtn:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+
+.custombtn2:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+.custombtn3 {
+  font-size: 25px;
+  height: 80px;
+  width: 110px;
+  background-color: rgb(56,168,233);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  margin-top: 20px;
+}
+
+.custombtn3:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+.faq {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  margin-bottom: 40px;
+}
+
+.faq_question {
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq_answer_container {
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+
+
+body {
+  background:black;  
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.effect-wrapper {
+  position:relative;
+  width:400px;
+  height:400px;
+}
+
+.effect-wrapper .layer1,
+.effect-wrapper .layer2 {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+}
+
+.effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      background:radial-gradient(Red, black, green, orange, blue);
+      
+  } 
+  
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      background:rgba(14, 201, 39, 0.1);
+     
+  } 
+  
+  .effect-wrapper .layer1 *,
+  .effect-wrapper .layer2 * {
+      display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+      width:80%;
+      height:80%;
+  } 
+  
+  
+  
+  
+  /* --------- Animation --------- */
+  .effect-wrapper .layer1,
+  .effect-wrapper .layer1 * {
+      -webkit-animation-name: spin-clockwise;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+      -webkit-box-shadow:inset 0 0 10px black;
+  }
+  
+  .effect-wrapper .layer2,
+  .effect-wrapper .layer2 * {
+      -webkit-animation-name: spin-counter-clockwise, pulsate-blue;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: cubic-bezier(0.82, 0.24, 0.25, 0.75);
+      -webkit-box-shadow:inset 0 0 10px black;
+  }
+  
+  
+  
+  
+  /* Animation: Clockwise */
+  @-webkit-keyframes spin-clockwise {
+      0%   { -webkit-transform: rotate(0deg);   }
+      100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  /* Animation: Counter counter clockwise */
+  @-webkit-keyframes spin-counter-clockwise {
+      0%   { -webkit-transform: rotate(0deg);   } 
+      100% { -webkit-transform: rotate(-360deg); }
+  }
+  
+  
+ /* Animation: Counter counter clockwise */
+ @-webkit-keyframes pulsate-blue {
+  0%   { background:radial-gradient(Red, black, green, orange, blue);
+         
+  } 
+  100% { background:radial-gradient(Red, black, green, orange, blue);
+         
+  }
+}
+
+.card-header {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 500px;
+  font-weight: 700;
+  border: none;
+}
+
+.card-body {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  border: none;
+}
+
+.card-footer {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  border: none;
+  
+}
+
+.getCode {
+margin: auto;
+height: 148px;
+width: 214.5px;
+background-color: rgb(56,168,233);
+color: white;
+border: none;
+border-radius: 20px;
+font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+font-size: xx-large;
+}
+
+.getCode:hover {
+  color: white;
+  background-color: hsl(110, 68%, 46%);
+}
+
+#referralCode {
+  text-align: center;
+  font-size: xx-large;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+}
+
+
+.taskDiv {
+  color: white;
+height:99%;
+width: 99%;
+
+background: black; 
+
+}
+.border-div{
+  padding:5px;
+  color: white;
+height: 50px;
+width: 500px;
+background: linear-gradient(blue, green);
+margin: 20px;
+}
+
+
+.btn-default {
+  border: medium;
+}
+
+.parkcar {
+  margin-bottom: 40px;
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 70px;
+}
+
+.thankyou {
+  text-align: center;
+}
+
+.effect-wrapper {
+  margin: auto;
+}
+
+.page-footer {
+  padding-top: 200px;
+
+}
+
+.services {
+  margin-bottom: 20px;
+}
+
+.referralTerms {
+  font-family: Georgia, 'Lucida Sans Regular', 'Lucida Grande', 'sans-serif';
+  font-size: 25px;
+}
