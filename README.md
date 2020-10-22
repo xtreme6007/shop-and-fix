@@ -49,13 +49,13 @@ N/A
 
 ## Screen shots
 
-![screenshot](assets/imgs/menu.png)
-![screenshot](assets/img/parking.png)
-![screenshot](assets/img/referal.png)
-![screenshot](assets/img/faq.png)
-![screenshot](assets/img/thankyou.png)
-![screenshot](assets/img/employeeDash.png)
-![screenshot](assets/img/support.png)
+![screenshot](/assets/imgs/menu.png)
+![screenshot](/assets/img/parking.png)
+![screenshot](/assets/img/referal.png)
+![screenshot](/assets/img/faq.png)
+![screenshot](/assets/img/thankyou.png)
+![screenshot](/assets/img/employeeDash.png)
+![screenshot](/assets/img/support.png)
 
 
 
