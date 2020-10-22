@@ -50,7 +50,7 @@ N/A
 ## Screen shots
 
 ![screenshot](/assets/imgs/menu.png)
-![screenshot](/assets/img/parking.png)
+![screenshot](public/assets/imgs/parking.png)
 ![screenshot](/assets/img/referal.png)
 ![screenshot](/assets/img/faq.png)
 ![screenshot](/assets/img/thankyou.png)
