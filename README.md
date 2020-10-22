@@ -55,7 +55,7 @@ N/A
 ![screenshot](public/assets/imgs/faq.png)
 ![screenshot](public/assets/imgs/thankyou.png)
 ![screenshot](public/assets/imgs/employeeDash.png)
-![screenshot](public/assets/imgs/support.png)
+
 
 
 
