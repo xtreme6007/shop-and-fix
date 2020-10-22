@@ -68,10 +68,10 @@ N/A
 ## Contributers
 Contributers for this project were:
 
-Preston Nichols
-Israel Varela
-Serge Bryan
-Bobby Evans
+Preston Nichols,
+Israel Varela,
+Serge Bryan,
+Bobby Evans,
 
 
 ## Tests
