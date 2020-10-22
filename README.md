@@ -51,11 +51,11 @@ N/A
 
 ![screenshot](public/assets/imgs/menu.png)
 ![screenshot](public/assets/imgs/parking.png)
-![screenshot](public/assets/img/referal.png)
-![screenshot](public/assets/img/faq.png)
-![screenshot](public/assets/img/thankyou.png)
-![screenshot](public/assets/img/employeeDash.png)
-![screenshot](public/assets/img/support.png)
+![screenshot](public/assets/imgs/referal.png)
+![screenshot](public/assets/imgs/faq.png)
+![screenshot](public/assets/imgs/thankyou.png)
+![screenshot](public/assets/imgs/employeeDash.png)
+![screenshot](public/assets/imgs/support.png)
 
 
 
